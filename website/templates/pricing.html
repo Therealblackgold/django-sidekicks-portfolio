@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- ***** Breadcrumb Area Start ***** -->
+
+<div class="breadcumb-area bg-img bg-gradient-overlay"
+    style="background-image: url({% static 'website/images/work.jpg' %});">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <h2 class="title">Our Pricing</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="breadcumb--con">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Our Pricing</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ***** Breadcrumb Area End ***** -->
+
+<div class="section-heading container">
+    <h2>Price List</h2>
+    <div class="line"></div>
+</div>
+<p class="container">Please take into concidration that every project is different and prices are subjective.</p>
+<p class="container">All our prices have dropped to make it even more affordable to get your business online today.</p>
+
+<!-- ***** Dento Pricing Table Area Start ***** -->
+<section class="dento-pricing-table-area mt-50 section-padding-0-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="dento-price-table table-responsive">
+                    <table class="table table-borderless mb-0">
+                        <thead>
+                            <tr>
+                                <th scope="col">Service Names</th>
+                                <th scope="col">Stage</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Static website</th>
+                                <td>1 page</td>
+                                <td>R1500.00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Three page website</th>
+                                <td>3 Page</td>
+                                <td>R3000.00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Personal, Food, Fahion, Music Blog Website</th>
+                                <td>2 Page plus unlimited posts</td>
+                                <td>R2500.00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ecommerce webapp</th>
+                                <td>10 items</td>
+                                <td>R3000.00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ecommerce mobile app</th>
+                                <td>Get a free quote</td>
+                                <td>POA</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Management Software</th>
+                                <td>Get a free quote</td>
+                                <td>POA</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Appointment web & mobile app</th>
+                                <td>Get a free quote</td>
+                                <td>POA</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Chat Bot</th>
+                                <td>Get a free quote</td>
+                                <td>POA</td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row"></th>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"></th>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="more-btn text-center mt-50">
+                    <a href="{% url 'about' %}" class="btn dento-btn">Read More <i
+                            class="fa fa-angle-double-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Dento Pricing Table Area End ***** -->
+
+<!-- ***** Footer Area Start ***** -->
+
+{% endblock %}

@@ -1,0 +1,538 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sidekicks Dev</title>
+
+    <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/unicons.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/owl.theme.default.min.css' %}">
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="{% static 'website/css/tooplate-style.css' %}">
+
+
+    <!--
+
+Tooplate 2115 Marvel
+
+https://www.tooplate.com/view/2115-marvel
+
+-->
+
+    <style type="text/css">
+        .header-img {
+            display: block;
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .thumbnail {
+            display: block;
+            width: 100%;
+            height: 180px;
+            object-fit: fill;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'website/images/logo.png'%}" alt=""></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="{% url 'about' %}" class="nav-link"><span data-hover="About">About</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'pricing' %}" class="nav-link"><span data-hover="Pricing">Pricing</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link"><span data-hover="Projects">Projects</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'contact' %}" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4">
+                        <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                            <i class="color-mode-icon"></i>
+                            Color mode
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ABOUT -->
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                    <div class="about-text">
+                        <small class="small-text">Welcome to <span class="mobile-block">sidekicks dev</span></small>
+                        <h2 class="animated animated-text">
+                            <span class="mr-2">We are</span>
+                            <div class="animated-info">
+                                <span class="animated-item">Web app</span>
+                                <span class="animated-item">Mobile app</span>
+                                <span class="animated-item">Developers</span>
+                            </div>
+                        </h2>
+
+                        <p>We code web and mobile applications from static websites,software management
+                            systems,appointment apps,chatbots,ecommerce,blogs and much more.
+                            Make a booking for further assistance.</p>
+
+                        <div class="custom-btn-group mt-4">
+                            <a target="_blank" href="{% static 'website/sidekicksdev.pdf' %}"
+                                class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i> Download
+                                Price List</a>
+                            <a href="{% url 'contact' %}" class="btn custom-btn custom-btn-bg custom-btn-link">Get a
+                                free quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="about-image svg">
+                        <img src="{% static 'website/images/undraw/undraw_Scrum_board_re_wk7v.svg' %}" class="img-fluid"
+                            alt="svg image">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="s2">
+        <div class="container">
+
+            <div class="about-wrapper">
+                <div class="about-me">
+                    <h4>About Us</h4>
+
+                    <p>We help our clients deliver their vision by coding and programming top of the line web and mobile
+                        applications.</p>
+                    <p>
+                        Regardless of whether you’re a legacy brand with decades of experience in the market or
+                        building a brand in its early stages
+                        , we create a personalised service and product offering that caters to your
+                        brand’s specific needs.</p>
+
+                    <p>Our Sidekicks team is made of visionary creatives,skilled analytical minds who
+                        take pride in conceptualising and executing innovative ideas and effective strategies to
+                        maximise your brand’s unlimited potential.</p>
+
+                    <hr>
+
+                    <h4>TOP EXPERTISE</h4>
+                    <p>Fullstack developers with our primary focus on Django,React and Googles Flutter: <a
+                            class="social-l" target="_blank" href="{% static 'website/sidekicksdev.pdf' %}">Download
+                            Price List</a></p>
+
+                    <div id="skills">
+                        <ul>
+                            <li>Python</li>
+                            <li>Django</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>Postgres</li>
+                        </ul>
+
+                        <ul>
+                            <li>Google Maps API</li>
+                            <li>JS Charts</li>
+                            <li>AWS (RDS/S3)</li>
+                            <li>Heroku</li>
+                            <li>HTML/CSS</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="social-links">
+                    <img id="social_img" src="{% static 'website/images/social.png' %}">
+                    <h4>Socials</h4>
+
+                    <a class="social-l" target="_blank"
+                        href="https://www.youtube.com/channel/UC3t8K_IyoVdEFaGzsbe7-wQ"><i
+                            class="uil uil-youtube-alt"></i></a>
+
+                    <a class="social-l" target="_blank" href="https://www.instagram.com/sidekicksdev/
+                    "><i class="uil uil-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PROJECTS*** -->
+    <section id="projects" class="s1">
+        <div class="container">
+            <h4 style="text-align: center;">OUR PROJECTS</h4>
+            <div class="post-wrapper">
+
+                {% for post in post %}
+
+                <div>
+                    <div class="post">
+                        <img class="header-img" src="{{ post.header_image.url }}" alt="">
+                        <div class="post-preview">
+                            <h6 class="post-title">{{ post.title }}</h6>
+                            <p class="post-intro">{{ post.description }}
+                            </p>
+                            <a href="{% url 'post-detail' post.pk %}">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+    <!-- <div class="mx-auto" style="width: 200px;">
+        <img class="thumbnail" src="{% static 'website/images/undraw/undraw5.svg' %}" alt="">
+    </div> -->
+
+    <!-- FEATURES -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12">
+                    <div class="section-heading container">
+                        <h2>Web Applications</h2>
+                        <div class="line"></div>
+                        <br>
+                        <img class="thumbnail"
+                            src="{% static 'website/images/undraw/undraw_online_collaboration_7pfp.svg' %}" alt="">
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>Python</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Python</span><small>Programming language</small></h3>
+                                <p>Python is an interpreted, high-level, general-purpose programming language. Created
+                                    by Guido van Rossum and first released in 1991, Python's design philosophy
+                                    emphasizes code readability with its notable use of significant whitespace. Its
+                                    language constructs and object-oriented approach aim to help programmers write
+                                    clear, logical code for small and large-scale projects.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>Django</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Django</span><small>Python Frame Work</small></h3>
+                                <p>django CMS is a free and open source content management system platform for
+                                    publishing content on the World Wide Web and intranets.It is written in Django
+                                    language framework, with Python.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>HTML</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>HTML<small>Hypertext Markup Language </small></h3>
+                                <p>Sed fringilla vitae enim sit amet cursus. Sed cursus dictum tortor quis pharetra.
+                                    Pellentesque
+                                    habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>CSS</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Cascading Style Sheets<small>Cascading Style Sheets</small></h3>
+                                <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the
+                                    presentation of a document written in a markup language like HTML.CSS is a
+                                    cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>JS</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>JavaScript<small>Programming Language</small></h3>
+                                <p>JavaScript,often abbreviated as JS, is a programming language
+                                    that conforms to the ECMAScript specification.JavaScript is high-level, often
+                                    just-in-time compiled, and multi-paradigm,Alongside HTML and CSS, JavaScript is one
+                                    of the core technologies of the World Wide Web.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="section-heading container">
+                        <h2>Mobile Applications</h2>
+                        <div class="line"></div>
+                        <br>
+                        <img class="thumbnail"
+                            src="{% static 'website/images/undraw/undraw_my_code_snippets_lynx.svg' %}" alt="">
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>Flutter</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Googles Fluttter</span><small>Software</small></h3>
+                                <p>Flutter is an open-source UI software development kit created by Google. It is used
+                                    to develop applications for Android, iOS, Linux, Mac, Windows, Google Fuchsia and
+                                    the web from a single codebase.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>Dart</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Dart</span><small>Programming Language</small></h3>
+                                <p>Dart is a client-optimized[8] programming language for apps on multiple platforms. It
+                                    is developed by Google and is used to build mobile, desktop, server, and web
+                                    applications.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>FB</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Firebase</span><small>Database Management</small></h3>
+                                <p>Firebase is a platform developed by Google for creating mobile and web applications.
+                                    It was originally an independent company founded in 2011. In 2014, Google
+                                    acquired the platform and it is now their flagship offering for app development.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="section-heading container">
+                        <h2>Server Side</h2>
+                        <div class="line"></div>
+                        <br>
+                        <img class="thumbnail"
+                            src="{% static 'website/images/undraw/undraw_data_extraction_ih3n.svg' %}" alt="">
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>Postgres</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>PostgreSQL</span><small>Database Management</small></h3>
+                                <p>PostgreSQL , also known as Postgres, is a free and
+                                    open-source relational database management system (RDBMS) emphasizing extensibility
+                                    and SQL compliance.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>AWS</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Amazon Web Services</span><small>Database Management</small></h3>
+                                <p>Amazon Web Services (AWS) is a subsidiary of Amazon providing on-demand cloud
+                                    computing platforms and APIs to individuals, companies, and governments, on a
+                                    metered pay-as-you-go basis. These cloud computing web services provide a variety of
+                                    basic abstract technical infrastructure and distributed computing building blocks
+                                    and tools. </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>MongoDB</span><small>Database Management</small></h3>
+                                <p>MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL
+                                    database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is
+                                    developed by MongoDB Inc. and licensed under the Server Side Public License (SSPL).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>SQL</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>MySQL</span><small>Database Management</small></h3>
+                                <p>MySQL is an open-source relational database
+                                    management system (RDBMS)MySQL is free and open-source software under the terms of
+                                    the GNU General Public License, and is also available under a variety of proprietary
+                                    licenses. MySQL was owned and sponsored by the Swedish company MySQL AB, which was
+                                    bought by Sun Microsystems (now Oracle Corporation).</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact py-5" id="contact">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-5 mr-lg-5 col-12">
+                    <div class="google-map w-100">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28652.159599609655!2d28.313828375904762!3d-26.14719084163052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e953dd24ecdde89%3A0x55ee721ed5cd69ee!2sRynfield%2C%20Benoni%2C%201514!5e0!3m2!1sen!2sza!4v1598962871391!5m2!1sen!2sza"
+                            width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
+                        <div class="contact-info-item">
+                            <h3 class="mb-3 text-white">Say hello</h3>
+                            <p class="footer-text mb-0">011 020 0960</p>
+                            <p><a href="mailto:hello@company.co">@sidekicksdev</a></p>
+                        </div>
+
+                        <ul class="social-links">
+                            <li><a href="#" class="uil uil-dribbble" data-toggle="tooltip" data-placement="left"
+                                    title="Dribbble"></a>
+                            </li>
+                            <li><a target="_blank" href="https://www.instagram.com/sidekicksdev/
+                                " class="uil uil-instagram" data-toggle="tooltip" data-placement="left"
+                                    title="Instagram"></a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/channel/UC3t8K_IyoVdEFaGzsbe7-wQ"
+                                    class="uil uil-youtube" data-toggle="tooltip" data-placement="left"
+                                    title="Youtube"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+
+                    <div class="contact-form">
+                        <a href="{% url 'contact' %}">
+                            <div class="section-heading container">
+                                <h2>Lests work togeather contact page for details.</h2>
+                                <div class="line"></div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Footer  -->
+    <footer>
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3 class="footer-h">Business Time</h3>
+                            <ul class="list-time">
+                                <li>Monday - Friday: 08.00am to 05.00pm</li>
+                                <li>Saturday: 10.00am to 03.00pm</li>
+                                <li>Sunday: <span>Closed</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-link">
+                            <h4 class="footer-h">Information</h4>
+                            <ul>
+                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                <li><a href="{% url 'contact' %}">Customer Service</a></li>
+                                <li><a href="#projects">Projects</a></li>
+                                <li><a href="{% url 'pricing' %}">Priceing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-12">
+                    <p class="copyright-text text-center">Copyright &copy; 2020 Company Name . All rights reserved</p>
+                    <p class="copyright-text text-center">Designed by <a rel="nofollow" target="_blank"
+                            href="{% url 'contact' %}">Sidekicks Dev</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer  -->
+
+
+    <script src="{% static 'website/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'website/js/popper.min.js' %}"></script>
+    <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'website/js/Headroom.js' %}"></script>
+    <script src="{% static 'website/js/jQuery.headroom.js' %}"></script>
+    <script src="{% static 'website/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'website/js/smoothscroll.js' %}"></script>
+    <script src="{% static 'website/js/custom.js' %}"></script>
+    <script src="https://kit.fontawesome.com/18e7f92fb6.js" crossorigin="anonymous"></script>
+
+
+</body>
+<!-- {% static 'website/' %} -->
+
+</html>

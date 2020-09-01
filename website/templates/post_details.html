@@ -1,0 +1,334 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ post.title }}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+
+
+    <style type="text/css">
+        .img-container {
+            max-width: 600px;
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
+
+        img {
+            width: 100%
+        }
+
+        #work_img {
+            display: block;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+
+            -webkit-box-shadow: 11px 12px 16px -3px rgba(0, 0, 0, 0.65);
+            -moz-box-shadow: 11px 12px 16px -3px rgba(0, 0, 0, 0.65);
+            box-shadow: 11px 12px 16px -3px rgba(0, 0, 0, 0.65);
+        }
+
+        .code {
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <br>
+
+    <div class="container">
+
+
+        <section class="s2">
+            <div class="container">
+
+                <div class="about-wrapper">
+                    <div class="about-me">
+                        <h4>{{ post.title }}</h4>
+
+                        <p>{{ post.description }}</p>
+
+                        <p>{{ post.body }}</p>
+
+                        <hr>
+
+                        <div class="section-heading container">
+                            <h4>Whats In The App?</h4>
+                            <div class="line"></div>
+                        </div>
+                        <ul id="features-ul">
+                            {% if post.features_1 %}
+                            <li>- {{ post.features_1 }}</li>
+                            {% else %}
+                            <h4>COMING SOON!</h4>
+                            {% endif %}
+
+                            {% if post.features_2 %}
+                            <li>- {{ post.features_2 }}</li>
+                            {% endif %}
+                            {% if post.features_3 %}
+                            <li>- {{ post.features_3 }}</li>
+                            {% endif %}
+                            {% if post.features_4 %}
+                            <li>- {{ post.features_4 }}</li>
+                            {% endif %}
+                            {% if post.features_5 %}
+                            <li>- {{ post.features_5 }}</li>
+                            {% endif %}
+                            {% if post.features_6 %}
+                            <li>- {{ post.features_6 }}</li>
+                            {% endif %}
+                            {% if post.features_7 %}
+                            <li>- {{ post.features_7 }}</li>
+                            {% endif %}
+                            {% if post.features_8 %}
+                            <li>- {{ post.features_8 }}</li>
+                            {% endif %}
+                        </ul>
+
+                    </div>
+
+
+                    <div class="social-links">
+                        <!-- <center>
+                            <img id="work_img" src="{{ post.header_image.url }}">
+                        </center> -->
+                        <div class="container">
+                            <img src="{% static 'website/images/undraw/code.svg' %}" alt="" class="code">
+                            <h4>Technologies</h4>
+
+                        </div>
+                        <ul>
+                            {% if post.technologies_1 %}
+                            <li>- {{ post.technologies_1 }}</li>
+                            {% else %}
+                            <h4>COMING SOON!</h4>
+                            {% endif %}
+
+                            {% if post.technologies_2 %}
+                            <li>- {{ post.technologies_2 }}</li>
+                            {% endif %}
+                            {% if post.technologies_3 %}
+                            <li>- {{ post.technologies_3 }}</li>
+                            {% endif %}
+                            {% if post.technologies_4 %}
+                            <li>- {{ post.technologies_4 }}</li>
+                            {% endif %}
+                            {% if post.technologies_5 %}
+                            <li>- {{ post.technologies_5 }}</li>
+                            {% endif %}
+                            {% if post.technologies_6 %}
+                            <li>- {{ post.technologies_6 }}</li>
+                            {% endif %}
+                            {% if post.technologies_7 %}
+                            <li>- {{ post.technologies_7 }}</li>
+                            {% endif %}
+                            {% if post.technologies_8 %}
+                            <li>- {{ post.technologies_8 }}</li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="section-heading container">
+            <h4>Screenshots</h4>
+            <div class="line"></div>
+        </div>
+
+        {% if post.is_mobile %}
+
+
+        <div class="post-wrapper">
+            {% if post.screenshot_1 %}
+            <div class="post">
+                <img class="app-img" src="{{ post.screenshot_1.url }}" alt="">
+                <div class="post-preview">
+                    {% if post.title_1  %}
+                    <center>
+                        <h6 class="post-title">{{ post.title_1 }}</h6>
+                    </center>
+                    {% endif %}
+                </div>
+            </div>
+            {% else %}
+            <h4>COMING SOON!</h4>
+            {% endif %}
+
+
+            {% if post.screenshot_2 %}
+            <div class="post">
+                <img class="app-img" src="{{ post.screenshot_2.url }}" alt="">
+                <div class="post-preview">
+                    {% if post.title_2  %}
+                    <center>
+                        <h6 class="post-title">{{ post.title_2 }}</h6>
+                    </center>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if post.screenshot_3 %}
+            <div class="post">
+                <img class="app-img" src="{{ post.screenshot_3.url }}" alt="">
+                <div class="post-preview">
+                    {% if post.title_3  %}
+                    <center>
+                        <h6 class="post-title">{{ post.title_3 }}</h6>
+                    </center>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if post.screenshot_4 %}
+            <div class="post">
+                <img class="app-img" src="{{ post.screenshot_4.url }}" alt="">
+                <div class="post-preview">
+                    {% if post.title_4  %}
+                    <center>
+                        <h6 class="post-title">{{ post.title_4 }}</h6>
+                    </center>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if post.screenshot_5 %}
+            <div class="post">
+                <img class="app-img" src="{{ post.screenshot_5.url }}" alt="">
+                <div class="post-preview">
+                    {% if post.title_5  %}
+                    <center>
+                        <h6 class="post-title">{{ post.title_5 }}</h6>
+                    </center>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if post.screenshot_6 %}
+            <div class="post">
+                <img class="app-img" src="{{ post.screenshot_6.url }}" alt="">
+                <div class="post-preview">
+                    {% if post.title_6  %}
+                    <center>
+                        <h6 class="post-title">{{ post.title_6 }}</h6>
+                    </center>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+
+        </div>
+
+        {% else %}
+
+        <div>
+            {% if post.screenshot_1 %}
+            {% if post.title_1  %}
+            <h5>{{ post.title_1 }}</h5>
+            {% endif %}
+            <div class="img-container">
+                <img id="web-img" src="{{ post.screenshot_1.url }}">
+            </div>
+            {% else %}
+            <h4>COMING SOON!</h4>
+            {% endif %}
+
+            {% if post.screenshot_2 %}
+            {% if post.title_2  %}
+            <h5>{{ post.title_2 }}</h5>
+            {% endif %}
+            <div class="img-container">
+                <img id="web-img" src="{{ post.screenshot_2.url }}">
+            </div>
+            {% endif %}
+
+            {% if post.screenshot_3 %}
+            {% if post.title_3  %}
+            <h5>{{ post.title_3 }}</h5>
+            {% endif %}
+            <div class="img-container">
+                <img id="web-img" src="{{ post.screenshot_3.url }}">
+            </div>
+            {% endif %}
+
+            {% if post.screenshot_4 %}
+            {% if post.title_4  %}
+            <h5>{{ post.title_4 }}</h5>
+            {% endif %}
+            <div class="img-container">
+                <img id="web-img" src="{{ post.screenshot_4.url }}">
+            </div>
+            {% endif %}
+
+            {% if post.screenshot_5 %}
+            {% if post.title_5  %}
+            <h5>{{ post.title_5 }}</h5>
+            {% endif %}
+            <div class="img-container">
+                <img id="web-img" src="{{ post.screenshot_5.url }}">
+            </div>
+            {% endif %}
+
+            {% if post.screenshot_6 %}
+            {% if post.title_6  %}
+            <h5>{{ post.title_6 }}</h5>
+            {% endif %}
+            <div class="img-container">
+                <img id="web-img" src="{{ post.screenshot_6.url }}">
+            </div>
+            {% endif %}
+
+            {% if post.screenshot_7 %}
+            {% if post.title_7  %}
+            <h5>{{ post.title_7 }}</h5>
+            {% endif %}
+            <div class="img-container">
+                <img id="web-img" src="{{ post.screenshot_7.url }}">
+            </div>
+            {% endif %}
+
+            {% if post.screenshot_8 %}
+            {% if post.title_8  %}
+            <h5>{{ post.title_8 }}</h5>
+            {% endif %}
+            <div class="img-container">
+                <img id="web-img" src="{{ post.screenshot_8.url }}">
+            </div>
+            {% endif %}
+
+            {% if post.screenshot_9 %}
+            {% if post.title_9  %}
+            <h5>{{ post.title_9 }}</h5>
+            {% endif %}
+            <div class="img-container">
+                <img id="web-img" src="{{ post.screenshot_9.url }}">
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+
+    </div>
+
+
+
+</body>
+
+</html>
+{% endblock %}
